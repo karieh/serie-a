@@ -2,47 +2,49 @@
 
 Turneringsprogram for Serie A, en sosial mix-turnering i sandvolleyball arrangert av [Oslo Sandvolleyballklubb](https://osvb.no).
 
-## Kom i gang
+## Oppsett (gjøres én gang)
 
-### 0. Installer Python
+### 1. Installer Python
 
-Hvis du ikke har Python installert, last ned fra [python.org](https://www.python.org/downloads/) (versjon 3.10 eller nyere). Under installasjonen, huk av for **"Add Python to PATH"**.
+Last ned fra [python.org](https://www.python.org/downloads/) (versjon 3.10 eller nyere).
 
-Verifiser at det fungerer:
+**Viktig:** Huk av for **"Add Python to PATH"** under installasjonen.
 
-```bash
-python --version
-```
+### 2. Last ned prosjektet
 
-### 1. Klon prosjektet
+Last ned eller klon prosjektet og legg mappen et fast sted, f.eks. `C:\serie_a\`:
 
 ```bash
-git clone <repo-url>
-cd serie_a
+git clone https://github.com/karieh/serie-a
 ```
 
-### 2. Installer avhengigheter
+### 3. Installer Streamlit
+
+Åpne en terminal i prosjektmappen og kjør:
 
 ```bash
 pip install streamlit
 ```
 
-### 3. Start programmet
+### 4. Verifiser at det fungerer
 
-```bash
-streamlit run app.py
-```
+Dobbeltklikk `Serie A.vbs` i prosjektmappen. En nettleser skal åpne seg med programmet.
 
-Programmet åpnes automatisk i nettleseren på `http://localhost:8501`.
+### 5. Lag snarvei på skrivebordet
 
-### 4. Opprett turnering
+1. Høyreklikk `Serie A.vbs` → **Send til** → **Skrivebord (lag snarvei)**
+2. Gi snarveien navnet **Serie A**
+
+Turneringslederen dobbeltklikker snarveien på skrivebordet for å starte programmet.
+
+## Første oppstart
 
 Ved første oppstart får du opp en dialog for å opprette en ny turnering. Lim inn spillerlistene (ett navn per linje) — damer i venstre felt, herrer i høyre — og trykk **Start ny turnering**.
 
 ## Bruk
 
 - **Sidebar**: Administrer spillere (aktiver/deaktiver, legg til, rediger, slett)
-- **Trekk ny runde**: Genererer lag basert på kjønn, tidligere partnere og motstandere
+- **Trekk ny runde**: Genererer lag basert på klasse, tidligere partnere og motstandere
 - **Registrer resultat**: Klikk på vinnerlaget per bane
 - **Ledertavle**: Oppdateres automatisk, viser seiere per spiller
 
@@ -50,8 +52,10 @@ Ved første oppstart får du opp en dialog for å opprette en ny turnering. Lim 
 
 | Fil | Beskrivelse |
 |---|---|
-| `app.py` | Streamlit-app, all UI |
+| `app.py` | Streamlit-app (UI) |
 | `db.py` | SQLite database-operasjoner |
 | `engine.py` | Trekkalgoritme for lagsammensetning |
+| `start.ps1` | PowerShell-script som starter programmet |
+| `Serie A.vbs` | Snarvei-launcher (dobbeltklikk for å starte) |
 | `tournament.db` | Database (opprettes automatisk) |
 | `osvb_logo.png` | OSVB-logo |
