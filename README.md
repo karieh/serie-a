@@ -15,7 +15,7 @@ Last ned fra [python.org](https://www.python.org/downloads/) (versjon 3.10 eller
 Last ned eller klon prosjektet og legg mappen et fast sted, f.eks. `C:\serie_a\`:
 
 ```bash
-git clone https://github.com/karieh/serie-a
+git clone <repo-url>
 ```
 
 ### 3. Installer Streamlit
@@ -32,10 +32,17 @@ Dobbeltklikk `Serie A.vbs` i prosjektmappen. En nettleser skal åpne seg med pro
 
 ### 5. Lag snarvei på skrivebordet
 
+**Windows:**
+
 1. Høyreklikk `Serie A.vbs` → **Send til** → **Skrivebord (lag snarvei)**
 2. Gi snarveien navnet **Serie A**
 
-Turneringslederen dobbeltklikker snarveien på skrivebordet for å starte programmet.
+**Mac:**
+
+1. Åpne Terminal i prosjektmappen og kjør én gang: `chmod +x start.sh`
+2. Dobbeltklikk `start.sh` for å starte, eller lag et alias i Dock
+
+Turneringslederen dobbeltklikker snarveien for å starte programmet.
 
 ## Første oppstart
 
@@ -55,7 +62,8 @@ Ved første oppstart får du opp en dialog for å opprette en ny turnering. Lim 
 | `app.py` | Streamlit-app (UI) |
 | `db.py` | SQLite database-operasjoner |
 | `engine.py` | Trekkalgoritme for lagsammensetning |
-| `start.ps1` | PowerShell-script som starter programmet |
-| `Serie A.vbs` | Snarvei-launcher (dobbeltklikk for å starte) |
+| `start.ps1` | PowerShell-script som starter programmet (Windows) |
+| `Serie A.vbs` | Snarvei-launcher for Windows |
+| `start.sh` | Launcher for Mac/Linux |
 | `tournament.db` | Database (opprettes automatisk) |
 | `osvb_logo.png` | OSVB-logo |
